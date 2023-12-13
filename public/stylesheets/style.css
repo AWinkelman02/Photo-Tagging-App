@@ -1,0 +1,30 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#gameArea{
+  border: red 1px solid;
+  width: fit-content;
+  height: fit-content;
+}
+
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.hidden {
+  /* The menu is hidden at first */
+  display: none;
+}
+
+#menu{
+  border: red 1px solid;
+  background-color: white;
+}
