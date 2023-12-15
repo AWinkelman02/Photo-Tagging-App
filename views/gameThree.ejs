@@ -5,13 +5,22 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <nav>
-        <a href="/">Home</a>
-      <h1><%= title %></h1>
+    <nav class="navbar" id="navbar">
+      <h1><a href="/">Game Name</a></h1>
+      <p>Timer</p>
+      <div id="object-list" class="list">
+        <p>Blank</p>
+        <p>Blank</p>
+        <p>Blank</p>
+      </div>
+      <button id="mode-switch">Light Dark</button>
     </nav>
-    <div id="gameArea">
+    <div id="gameArea" class="relative">
       <img src="../images/downtown.jpg" alt="Downtown Puzzle">
     </div>
+    <menu id="menu" class="absolute hidden"></menu>
     <script src="../javascripts/script.js"></script>
   </body>
 </html>
+
+

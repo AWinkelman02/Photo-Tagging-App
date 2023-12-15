@@ -5,9 +5,12 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <nav>
-        <a href="/">Home</a>
-      <h1><%= title %></h1>
+    <nav class="navbar" id="navbar">
+      <h1><a href="/">Game Name</a></h1>
+      <div class="list">
+        <p><a href="/leaderboard">Leaderboard</a></p>
+        <button id="mode-switch">Light Dark</button>
+      </div>
     </nav>
     <div class="container">
       leaderboard info

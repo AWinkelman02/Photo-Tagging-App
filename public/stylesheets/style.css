@@ -1,16 +1,51 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+:root{
+  --dark1: #2d333b;
+  --dark2: #1c2128;
+
+  --text: #F9F9FB;
+  --primary: #8584AE;
+  --secondary: #101019;
+  --accent: #626194;
 }
 
-a {
-  color: #00B7FF;
+body {
+  margin:0px; padding:0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar{
+  width: 99%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1vh;
+  background-color: rgb(240, 240, 240);
+}
+
+.list{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.list > p{
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 #gameArea{
-  border: red 1px solid;
   width: fit-content;
   height: fit-content;
+}
+
+.pin{
+  position: absolute;
+  width: 25px;
+  height: 25px;
 }
 
 .relative {
@@ -25,6 +60,80 @@ a {
 }
 
 #menu{
-  border: red 1px solid;
   background-color: white;
+}
+
+/* alert message */
+
+.alert{
+  position: sticky;
+  bottom: 10vh;
+  border-radius: 10px;
+  padding: 5px;
+  width: fit-content;
+}
+
+.success{
+  background-color: rgb(46, 241, 28);
+}
+
+.fail{
+  background-color: rgb(241, 28, 28);
+}
+
+.slide-in {
+	-webkit-animation: slide-in-bottom 3.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)  both;
+	        animation: slide-in-bottom 3.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)  both;
+}
+
+/* darkmode style */
+.navbar.darkmode{
+  background-color: var(--dark1);
+}
+
+body.darkmode{
+  background-color: var(--dark2);
+}
+
+
+/* animation frames */
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+    opacity: 0;
+  }
+  5% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+    opacity: 0;
+  }
+  5% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

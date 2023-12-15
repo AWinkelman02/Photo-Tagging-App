@@ -5,14 +5,18 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <nav>
-      <h1><%= title %></h1>
-      <p><a href="/leaderboard">Leaderboard</a></p>
+    <nav class="navbar" id="navbar">
+      <h1><a href="/">Game Name</a></h1>
+      <div class="list">
+        <p><a href="/leaderboard">Leaderboard</a></p>
+        <button id="mode-switch">Light Dark</button>
+      </div>
     </nav>
     <div class="container">
       <a href="/gameOne">Game 1</a>
-      <a href="/gameTwo">Mario Castle</a>
+      <a href="/Mario-Castle">Mario Castle</a>
       <a href="/gameThree">Game 3</a>
     </div>
+    <script src="../javascripts/style.js"></script>
   </body>
 </html>

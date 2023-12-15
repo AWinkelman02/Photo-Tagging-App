@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <h1><a href="/">Game Name</a></h1>
+      <p>Timer</p>
+      <div id="object-list" class="list">
+        <p>Luigi</p>
+        <p>Blue Toad</p>
+        <p>Super Leaf</p>
+      </div>
+      <button id="mode-switch">Light Dark</button>
+    </nav>
+    <div id="gameArea" class="relative">
+      <img src="../images/mario-castle.jpg" alt="Mario Castle">
+    </div>
+    <dialog class="game-start" open>
+      <p>Greetings, one and all!</p>
+      <form method="dialog">
+        <button>OK</button>
+      </form>
+    </dialog>
+    <dialog class="leaderboard-form">
+      <p>Greetings, one and all!</p>
+      <form method="dialog">
+        <button>OK</button>
+      </form>
+    </dialog>
+    <div id="popup" class="alert"></div>
+    <menu id="menu" class="absolute hidden"></menu>
+    <script src="../javascripts/style.js"></script>
+    <script src="../javascripts/game.js"></script>
+  </body>
+</html>

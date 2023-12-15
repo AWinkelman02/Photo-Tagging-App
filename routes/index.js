@@ -13,9 +13,9 @@ router.get('/leaderboard', game_controller.leaderboard);
 router.get('/gameOne', game_controller.gameOne);
 
 /* GET game two page. */
-router.get('/gameTwo', game_controller.gameTwo);
+router.get('/Mario-Castle', game_controller.marioCastle);
 
-router.get('/gameTwo/data', game_controller.gameTwoData);
+router.get('/Mario-Castle/data', game_controller.marioCastleData);
 
 /* GET game three page. */
 router.get('/gameThree', game_controller.gameThree);
