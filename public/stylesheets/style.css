@@ -122,6 +122,11 @@ body{
   justify-content: space-between;
 }
 
+
+#leaderboard-form{
+  z-index: 999;
+}
+
 /* darkmode style */
 .navbar.darkmode{
   background-color: var(--dark1);

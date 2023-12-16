@@ -28,7 +28,6 @@ function game(response){
     const startGameButton = document.getElementById('start-button');
     const leaderBoardForm = document.getElementById('leaderboard-form');
 
-    let hour = 0; 
     let minute = 0; 
     let second = 0; 
     let count = 0; 
@@ -199,15 +198,16 @@ function game(response){
         gameData.forEach(object => {
             if(object.found === true){
                 score++
-                console.log(score);
             }
         });
         if(score === 3){
-            console.log("end game");
+            leaderBoardForm.show();
             timer = false;
             stopWatch();
         }
     }
+
+    //---------Populate Leaderboard-------------
 
 }
 

@@ -9,15 +9,19 @@ router.get('/', game_controller.index);
 /* GET leaderboard page. */
 router.get('/leaderboard', game_controller.leaderboard);
 
-/* GET game one page. */
-router.get('/gameOne', game_controller.gameOne);
-
-/* GET game two page. */
+/* GET mario game page. */
 router.get('/Mario-Castle', game_controller.marioCastle);
 
 router.get('/Mario-Castle/data', game_controller.marioCastleData);
 
+/* GET cyber game page. */
+router.get('/Cyber-City', game_controller.cyberCity);
+
+router.get('/Cyber-City/data', game_controller.cyberCityData);
+
 /* GET game three page. */
-router.get('/gameThree', game_controller.gameThree);
+router.get('/Space-Party', game_controller.spaceParty);
+
+router.get('/Space-Party/data', game_controller.spacePartyData);
 
 module.exports = router;

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body class="lock-body">
+    <nav class="navbar" id="navbar">
+      <h1><a href="/">PhotoHunt</a></h1>
+      <div id="timer">
+      <span class="digit" id="min"> 
+          00</span> 
+      <span class="txt">:</span> 
+      <span class="digit" id="sec"> 
+          00</span> 
+      <span class="txt">:</span> 
+      <span class="digit" id="count"> 
+          00</span>
+      </div>
+      <div id="object-list" class="list">
+        <p><%= data[0].object %></p>
+        <p><%= data[1].object %></p>
+        <p><%= data[2].object %></p>
+      </div>
+      <button id="mode-switch">Light Dark</button>
+    </nav>
+    <div id="gameArea" class="lock-game">
+      <img class="game-image" src="../images/<%= name %>.jpg" alt="Mario Castle">
+    </div>
+    <dialog id="start-dialog" class="start-popup" open>
+      <div class="overview">
+        <img class="game-preview" src="../images/<%= name %>.jpg" alt="Mario Castle">
+        <div class="details">
+          <p>Start Game Screen</p>
+          <form method="dialog">
+            <button id="start-button">Start</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+    <dialog id="leaderboard-form">
+      <p>You Win! Post your score to the leaderboard!</p>
+      <form method="dialog">
+        <button id="leaderButton">OK</button>
+      </form>
+    </dialog>
+    <div id="popup" class="alert"></div>
+    <menu id="menu" class="absolute hidden"></menu>
+    <script src="../javascripts/style.js"></script>
+    <script src="../javascripts/game.js"></script>
+  </body>
+</html>
