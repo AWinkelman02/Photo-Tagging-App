@@ -8,12 +8,17 @@
   --accent: #626194;
 }
 
-body {
+body{
   margin:0px; padding:0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.lock-body{
+  height: 100vh;
+  overflow-y: hidden;
 }
 
 .navbar{
@@ -24,6 +29,9 @@ body {
   align-items: center;
   padding: 1vh;
   background-color: rgb(240, 240, 240);
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .list{
@@ -38,19 +46,22 @@ body {
 }
 
 #gameArea{
-  width: fit-content;
+  width: 100%;
   height: fit-content;
-}
-
-.pin{
-  position: absolute;
-  width: 25px;
-  height: 25px;
-}
-
-.relative {
   position: relative;
+  z-index: 10;
 }
+
+.lock-game{
+  pointer-events: none;
+  filter: brightness(.5);
+}
+
+.game-image{
+  width: 100%;
+  height: auto;
+}
+
 .absolute {
   position: absolute;
 }
@@ -61,29 +72,54 @@ body {
 
 #menu{
   background-color: white;
+  z-index: 11;
 }
 
 /* alert message */
-
 .alert{
   position: sticky;
   bottom: 10vh;
   border-radius: 10px;
   padding: 5px;
   width: fit-content;
+  z-index: 12;
 }
 
 .success{
-  background-color: rgb(46, 241, 28);
+  background-color: rgba(46, 241, 28, 0.89);
 }
 
 .fail{
-  background-color: rgb(241, 28, 28);
+  background-color: rgba(241, 28, 28, 0.89);
 }
 
 .slide-in {
 	-webkit-animation: slide-in-bottom 3.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)  both;
 	        animation: slide-in-bottom 3.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)  both;
+}
+
+/* game start modal */
+.start-popup{
+  position: absolute;
+  top: 20%;
+  gap: 10px;
+  z-index: 999;
+}
+
+.overview{
+  display: flex;
+}
+
+.game-preview{
+  width: auto;
+  height: 40vh;
+}
+
+.details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* darkmode style */

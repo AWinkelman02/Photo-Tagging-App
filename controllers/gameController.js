@@ -25,28 +25,22 @@ exports.marioCastleData = asyncHandler(async (req, res, next) => {
     const data = [
         {
             "object": "Luigi",
-            "x": 967,
-            "y": 1869,
-            "pinX": 955,
-            "pinY": 1850,
+            "x": 966,
+            "y": 1917,
             "found": false,
             "game": "Mario-Castle"
         },
         {
             "object": "Blue Toad",
-            "x": 1080,
-            "y": 662,
-            "pinX": 1067,
-            "pinY": 645,
+            "x": 1079,
+            "y": 710,
             "found": false,
             "game": "Mario-Castle"
         },
         {
             "object": "Super Leaf",
-            "x": 128,
-            "y": 698,
-            "pinX": 116,
-            "pinY": 682,
+            "x": 129,
+            "y": 744,
             "found": false,
             "game": "Mario-Castle"
         },

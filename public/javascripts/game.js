@@ -1,13 +1,9 @@
-//list of objects you are finding with their coordinates and found status
-
-//locate object plus of minus 30 pixels from given point
-//select array of coordinates 
-
-//if all objects found, win and display popup form to save 
-
-//logic to fetch based on game selected
-
-    //---------Fetch Game Data-----------
+//---------Scroll to Top of Page on Refresh-----------
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
+    
+//---------Fetch Game Data-----------
 document.addEventListener('DOMContentLoaded', ()=>{
     let gameName = document.querySelector('title').innerHTML;
     fetch(`/${gameName}/data`, {mode: 'cors'})
@@ -20,19 +16,33 @@ document.addEventListener('DOMContentLoaded', ()=>{
     })
 });
 
-//need start game modal
-//need timer modal
-//need submit score form
+let timer = false;
 
-
-
-
+//---------Main Game-----------
 function game(response){
     const gameArea = document.getElementById('gameArea');
     const gameMenu = document.getElementById('menu');
     const popup = document.getElementById('popup');
+    const body = document.body;
+
+    const startGameButton = document.getElementById('start-button');
+    const leaderBoardForm = document.getElementById('leaderboard-form');
+
+    let hour = 0; 
+    let minute = 0; 
+    let second = 0; 
+    let count = 0; 
+
 
     gameData = response;
+
+    //---------Start Game Modal-----------
+    startGameButton.addEventListener('click',()=>{
+        timer = true; 
+        stopWatch();
+        body.classList.remove('lock-body');
+        gameArea.classList.remove('lock-game');
+    })
     
     //---------selection menu-----------
     //prevent default context menu from being displayed
@@ -42,11 +52,12 @@ function game(response){
 
     //show menu on click relative to click location
     gameArea.addEventListener('contextmenu', function (e) {
-        const x = e.pageX;
-        const y = e.pageY;
+
+        const x = normalizeCoordinates((e.pageX - e.target.offsetLeft),e.target.width, e.target.naturalWidth)
+        const y = normalizeCoordinates((e.pageY - e.target.offsetTop),e.target.height, e.target.naturalHeight)
         // Set the position for menu
-        menu.style.top = `${y}px`;
-        menu.style.left = `${x}px`;
+        menu.style.top = `${e.pageY}px`;
+        menu.style.left = `${e.pageX}px`;
         //set clicked coords to menu to use later
         menu.setAttribute('xCoord', `${x}`);
         menu.setAttribute('yCoord', `${y}`);
@@ -90,22 +101,23 @@ function game(response){
     };
 
     //---------Coordinate Check Logic-------------
+    function normalizeCoordinates(coord, dimension, naturalDimension){
+        return Math.round((coord / dimension) * naturalDimension);
+    }
+
     function checkCoordinates(x, y, data){
         let found = false;
-        let normalizeCoords = gameArea.getBoundingClientRect();
-        let relX = x - normalizeCoords.left;
-        let relY = y - normalizeCoords.top - window.scrollY;
-        let xx = Math.round(relX) - 20;
-        let yy = Math.round(relY) - 20;
+        let xx = x - 40;
+        let yy = y - 40;
         
-        for (let i = yy; i < yy + 40 && !found; i++) {
-            for (let j = xx; j < xx + 40 && !found; j++) {
+        for (let i = yy; i < yy + 80 && !found; i++) {
+            for (let j = xx; j < xx + 80 && !found; j++) {
                 if(j === gameData[data].x && i === gameData[data].y){
                     gameData[data].found = true;
                     found = true;
-                    placeMarker(data);
                     clearMessage();
                     alertMessage(data, true);
+                    endGame();
                 }
             }
         }
@@ -135,16 +147,68 @@ function game(response){
         popup.innerHTML = "";
     }
 
-    //---------Place Marker Logic-------------
-    function placeMarker(object){
-        let pin = document.createElement('img')
-        pin.setAttribute('src', '../images/pin.png')
-        pin.setAttribute('alt', 'pin')
-        pin.classList.add('pin');
-        pin.style.left = `${gameData[object].pinX}px`;
-        pin.style.top = `${gameData[object].pinY}px`;
-        gameArea.appendChild(pin);
+    //---------Stopwatch Logic-------------
+    function stopWatch() { 
+        if (timer) { 
+            count++; 
+      
+            if (count == 100) { 
+                second++; 
+                count = 0; 
+            } 
+      
+            if (second == 60) { 
+                minute++; 
+                second = 0; 
+            } 
+      
+            if (minute == 60) { 
+                minute = 0; 
+                second = 0; 
+            } 
+      
+            let minString = minute; 
+            let secString = second; 
+            let countString = count; 
+      
+            if (minute < 10) { 
+                minString = "0" + minString; 
+            } 
+      
+            if (second < 10) { 
+                secString = "0" + secString; 
+            } 
+      
+            if (count < 10) { 
+                countString = "0" + countString; 
+            } 
+    
+            document.getElementById('min').innerHTML = minString; 
+            document.getElementById('sec').innerHTML = secString; 
+            document.getElementById('count').innerHTML = countString; 
+            setTimeout(()=>{
+                stopWatch();
+            }, 10); 
+        } 
     }
+
+    //---------Game End Logic-------------
+    function endGame(){
+        let score = 0;
+        console.log(score);
+        gameData.forEach(object => {
+            if(object.found === true){
+                score++
+                console.log(score);
+            }
+        });
+        if(score === 3){
+            console.log("end game");
+            timer = false;
+            stopWatch();
+        }
+    }
+
 }
 
 game();

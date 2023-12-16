@@ -5,10 +5,19 @@
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-  <body>
+  <body class="lock-body">
     <nav class="navbar" id="navbar">
       <h1><a href="/">Game Name</a></h1>
-      <p>Timer</p>
+      <div id="timer">
+      <span class="digit" id="min"> 
+          00</span> 
+      <span class="txt">:</span> 
+      <span class="digit" id="sec"> 
+          00</span> 
+      <span class="txt">:</span> 
+      <span class="digit" id="count"> 
+          00</span>
+      </div>
       <div id="object-list" class="list">
         <p>Luigi</p>
         <p>Blue Toad</p>
@@ -16,17 +25,22 @@
       </div>
       <button id="mode-switch">Light Dark</button>
     </nav>
-    <div id="gameArea" class="relative">
-      <img src="../images/mario-castle.jpg" alt="Mario Castle">
+    <div id="gameArea" class="lock-game">
+      <img class="game-image" src="../images/mario-castle.jpg" alt="Mario Castle">
     </div>
-    <dialog class="game-start" open>
-      <p>Greetings, one and all!</p>
-      <form method="dialog">
-        <button>OK</button>
-      </form>
+    <dialog id="start-dialog" class="start-popup" open>
+      <div class="overview">
+        <img class="game-preview" src="../images/mario-castle.jpg" alt="Mario Castle">
+        <div class="details">
+          <p>Start Game Screen</p>
+          <form method="dialog">
+            <button id="start-button">Start</button>
+          </form>
+        </div>
+      </div>
     </dialog>
-    <dialog class="leaderboard-form">
-      <p>Greetings, one and all!</p>
+    <dialog id="leaderboard-form">
+      <p>You Win! Post your score to the leaderboard!</p>
       <form method="dialog">
         <button>OK</button>
       </form>
