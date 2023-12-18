@@ -116,6 +116,7 @@ function game(response){
                     found = true;
                     clearMessage();
                     alertMessage(data, true);
+                    crossOutObject(data);
                     endGame();
                 }
             }
@@ -139,11 +140,16 @@ function game(response){
             alert.innerHTML = "Try Again"
         }
         popup.appendChild(alert);
-        setTimeout(()=>{clearMessage()}, 3600)
+        setTimeout(()=>{clearMessage()}, 3550)
     }
 
     function clearMessage(){
         popup.innerHTML = "";
+    }
+
+    function crossOutObject(data){
+        let object = document.getElementById(`${gameData[data].object}`);
+        object.classList.add('strike-through');
     }
 
     //---------Stopwatch Logic-------------

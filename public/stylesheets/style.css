@@ -75,6 +75,10 @@ body{
   z-index: 11;
 }
 
+.strike-through{
+  text-decoration: line-through;
+}
+
 /* alert message */
 .alert{
   position: sticky;
