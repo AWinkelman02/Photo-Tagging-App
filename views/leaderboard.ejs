@@ -6,14 +6,20 @@
   </head>
   <body>
     <nav class="navbar" id="navbar">
-      <h1><a href="/">Game Name</a></h1>
+      <h1><a href="/">PhotoHunt</a></h1>
       <div class="list">
         <p><a href="/leaderboard">Leaderboard</a></p>
         <button id="mode-switch">Light Dark</button>
       </div>
     </nav>
-    <div class="container">
-      leaderboard info
+    <div class="game-selection">
+      <Button id="mario">Mario Castle</Button>
+      <Button id="cyber">Cyber City</Button>
+      <Button id="space">Space Party</Button>
     </div>
+    <table class="hidden" id="leaderboard">
+    </table>
+    <script src="../javascripts/style.js"></script>
+    <script src="../javascripts/leaderboard.js"></script>
   </body>
 </html>

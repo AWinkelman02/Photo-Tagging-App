@@ -9,8 +9,16 @@ exports.index = asyncHandler(async (req, res, next) => {
 });
 
 exports.leaderboard = asyncHandler(async (req, res, next) => {
-    //query database for the data
     res.render("leaderboard", { title: 'Leaderboard' });
+});
+
+exports.leaderboardData = asyncHandler(async (req, res, next) => {
+    //query database for the data
+    const leaderboard =  await Leaderboard.find({})
+    .sort({ time: 1 })
+    .exec();
+
+    res.send({leaderboard: leaderboard });
 });
 
 exports.marioCastle = asyncHandler(async (req, res, next) => {

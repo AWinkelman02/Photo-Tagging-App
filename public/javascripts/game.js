@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
     })
     .then((response)=>{
         game(response.data);
-        console.log(response.data);
     })
 });
 
@@ -52,8 +51,8 @@ function game(response){
     //show menu on click relative to click location
     gameArea.addEventListener('contextmenu', function (e) {
 
-        const x = normalizeCoordinates((e.pageX - e.target.offsetLeft),e.target.width, e.target.naturalWidth)
-        const y = normalizeCoordinates((e.pageY - e.target.offsetTop),e.target.height, e.target.naturalHeight)
+        let x = normalizeCoordinates((e.pageX - e.target.offsetLeft),e.target.width, e.target.naturalWidth)
+        let y = normalizeCoordinates((e.pageY - e.target.offsetTop),e.target.height, e.target.naturalHeight)
         // Set the position for menu
         menu.style.top = `${e.pageY}px`;
         menu.style.left = `${e.pageX}px`;
@@ -88,9 +87,8 @@ function game(response){
         gameMenu.innerHTML = '';
     };
 
-    // Hide the menu when clicking outside of it
     const documentClickHandler = function(e) {
-        const isClickedOutside = !menu.contains(e.target);
+        let isClickedOutside = !menu.contains(e.target);
         if (isClickedOutside) {
             // Hide the menu
             menu.classList.add('hidden');

@@ -9,6 +9,8 @@ router.get('/', game_controller.index);
 /* GET leaderboard page. */
 router.get('/leaderboard', game_controller.leaderboard);
 
+router.get('/leaderboard/data', game_controller.leaderboardData);
+
 /* GET mario game page. */
 router.get('/Mario-Castle', game_controller.marioCastle);
 
