@@ -3,22 +3,42 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   </head>
   <body>
     <nav class="navbar" id="navbar">
-      <h1><a href="/">PhotoHunt</a></h1>
-      <div class="list">
-        <p><a href="/leaderboard">Leaderboard</a></p>
-        <button id="mode-switch">Light Dark</button>
+      <h1 class="game-title first"><a href="/">Photo<span class="second">Hunt</span></a></h1>
+      <div class="list right">
+        <p class="leaderboard"><a href="/leaderboard">Leaderboard</a></p>
+        <button id="mode-switch" class="switch"><box-icon name='tone' color="#6765cf"></box-icon></button>
       </div>
     </nav>
-    <div class="game-selection">
-      <Button id="mario">Mario Castle</Button>
-      <Button id="cyber">Cyber City</Button>
-      <Button id="space">Space Party</Button>
+    <div class="bx-card">
+      <div class="card">
+        <img class="preview" src="../images/mario-castle.jpg" alt="Mario Castle">
+        <div class="container">
+          <h3>Mario Castle</h3>
+          <Button id="mario" class="play">Show Leaderboard</Button>
+        </div>
+      </div>
+      <div class="card">
+        <img class="preview" src="../images/cyber-city.jpg" alt="Cyber City">
+        <div class="container">
+          <h3>Cyber City</h3>
+          <Button id="cyber" class="play">Show Leaderboard</Button>
+        </div>
+      </div>
+      <div class="card">
+        <img class="preview" src="../images/space-party.jpg" alt="Space Party">
+        <div class="container">
+          <h3>Space Party</h3>
+          <Button id="space" class="play">Show Leaderboard</Button>
+        </div>
+      </div>
     </div>
     <table class="hidden" id="leaderboard">
     </table>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="../javascripts/style.js"></script>
     <script src="../javascripts/leaderboard.js"></script>
   </body>

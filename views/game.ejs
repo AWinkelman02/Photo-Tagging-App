@@ -3,11 +3,12 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   </head>
   <body class="lock-body">
     <nav class="navbar" id="navbar">
-      <h1><a href="/">PhotoHunt</a></h1>
-      <div id="timer">
+      <h1 class="game-title first"><a href="/">Photo<span class="second">Hunt</span></a></h1>
+      <div id="timer" class="timer">
         <span class="digit" id="min"> 
             00</span> 
         <span class="txt">:</span> 
@@ -31,7 +32,7 @@
           <p id="<%= data[2].object %>"><%= data[2].object %></p>
         </div>
       </div>
-      <button id="mode-switch">Light Dark</button>
+      <button id="mode-switch" class="switch right"><box-icon name='tone' color="#6765cf"></box-icon></button>
     </nav>
     <div id="gameArea" class="lock-game">
       <img class="game-image" src="../images/<%= name %>.jpg" alt="Mario Castle">
@@ -40,21 +41,31 @@
       <div class="overview">
         <img class="game-preview" src="../images/<%= name %>.jpg" alt="Mario Castle">
         <div class="details">
-          <p>Start Game Screen</p>
+          <p><strong>Welcome to PhotoHunt!</strong></p>
+          <p><strong>Instructions</strong></p>
+          <p>See how fast you can find the characters.<br>
+          When you find one, right click the character and select them from the menu.<br>
+          Press start when you are ready to begin!</p>
           <form method="dialog">
             <button id="start-button">Start</button>
           </form>
         </div>
       </div>
     </dialog>
-    <dialog id="leaderboard-form">
-      <p>You Win! Post your score to the leaderboard!</p>
-      <form method="dialog">
+    <dialog id="leaderboard-form" class="start-popup">
+      <form method="Post">
+        <p>You win! Post your time to the leaderboard.</p>
+        <label for="time">You finished in</label>
+        <input type="text" name="time" id="time" readonly>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+        <input type="text" name="game" id="game" hidden readonly>
         <button id="leaderButton">OK</button>
       </form>
     </dialog>
     <div id="popup" class="alert"></div>
     <menu id="menu" class="absolute hidden"></menu>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="../javascripts/style.js"></script>
     <script src="../javascripts/game.js"></script>
   </body>

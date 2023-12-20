@@ -192,7 +192,7 @@ function game(response){
             setTimeout(()=>{
                 stopWatch();
             }, 10); 
-        } 
+        }
     }
 
     //---------Game End Logic-------------
@@ -205,6 +205,7 @@ function game(response){
             }
         });
         if(score === 3){
+            populateLeaderBoard();
             leaderBoardForm.show();
             timer = false;
             stopWatch();
@@ -212,7 +213,20 @@ function game(response){
     }
 
     //---------Populate Leaderboard-------------
-
+    function populateLeaderBoard(){
+        let time = document.getElementById('time');
+        let gameName = document.getElementById('game');
+        time.value = getTime();
+        gameName.value = document.querySelector('title').innerHTML;
+    }
+       
+    function getTime(){
+        let minString = document.getElementById('min').innerHTML;
+        let secString = document.getElementById('sec').innerHTML; 
+        let countString = document.getElementById('count').innerHTML; 
+        let time = minString+":"+secString+":"+countString;
+        return time;
+    }
 }
 
 game();

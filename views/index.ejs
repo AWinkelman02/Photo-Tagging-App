@@ -6,17 +6,36 @@
   </head>
   <body>
     <nav class="navbar" id="navbar">
-      <h1><a href="/">PhotoHunt</a></h1>
-      <div class="list">
-        <p><a href="/leaderboard">Leaderboard</a></p>
-        <button id="mode-switch">Light Dark</button>
+      <h1 class="game-title first"><a href="/">Photo<span class="second">Hunt</span></a></h1>
+      <div class="list right">
+        <p class="leaderboard"><a href="/leaderboard">Leaderboard</a></p>
+        <button id="mode-switch" class="switch"><box-icon name='tone' color="#6765cf"></box-icon></button>
       </div>
     </nav>
-    <div class="container">
-      <a href="/Mario-Castle">Mario Castle</a>
-      <a href="/Cyber-City">Cyber City</a>
-      <a href="/Space-Party">Space Party</a>
+    <div class="bx-card">
+      <div class="card">
+        <img class="preview" src="../images/mario-castle.jpg" alt="Mario Castle">
+        <div class="container">
+          <h3 class="link-name">Mario Castle</h3>
+          <a class="link" href="/Mario-Castle"><button class="play">Start Game</button></a>
+        </div>
+      </div>
+      <div class="card">
+        <img class="preview" src="../images/cyber-city.jpg" alt="Cyber City">
+        <div class="container">
+          <h3 class="link-name">Cyber City</h3>
+          <a class="link" href="/Cyber-City"><button class="play">Start Game</button></a>
+        </div>
+      </div>
+      <div class="card">
+        <img class="preview" src="../images/space-party.jpg" alt="Space Party">
+        <div class="container">
+          <h3 class="link-name">Space Party</h3>
+          <a class="link" href="/Space-Party"><button class="play">Start Game</button></a>
+        </div>
+      </div>
     </div>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="../javascripts/style.js"></script>
   </body>
 </html>
