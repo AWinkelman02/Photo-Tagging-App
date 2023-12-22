@@ -4,33 +4,34 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-  <body>
-    <nav class="navbar" id="navbar">
-      <h1 class="game-title first"><a href="/">Photo<span class="second">Hunt</span></a></h1>
+  <body data-dm="2">
+    <nav class="navbar flex" id="navbar" data-dm="1">
+      <h1 class="game-title first" id="game-title" data-dm="4"><a href="/" data-dm="3">Photo<span class="second">Hunt</span></a></h1>
       <div class="list right">
-        <p class="leaderboard"><a href="/leaderboard">Leaderboard</a></p>
+        <p class="leaderboard" data-dm="4"><a href="/leaderboard" data-dm="3">Leaderboard</a></p>
         <button id="mode-switch" class="switch"><box-icon name='tone' color="#6765cf"></box-icon></button>
       </div>
     </nav>
+    <h1 data-dm="3" class="lgletters">Games</h1>
     <div class="bx-card">
-      <div class="card">
-        <img class="preview" src="../images/mario-castle.jpg" alt="Mario Castle">
-        <div class="container">
-          <h3 class="link-name">Mario Castle</h3>
+      <div class="card size">
+        <img class="preview size" src="../images/mario-castle.jpg" alt="Mario Castle">
+        <div class="container" data-dm="1">
+          <h3 class="link-name" data-dm="3">Mario Castle</h3>
           <a class="link" href="/Mario-Castle"><button class="play">Start Game</button></a>
         </div>
       </div>
-      <div class="card">
-        <img class="preview" src="../images/cyber-city.jpg" alt="Cyber City">
-        <div class="container">
-          <h3 class="link-name">Cyber City</h3>
+      <div class="card size">
+        <img class="preview size" src="../images/cyber-city.jpg" alt="Cyber City">
+        <div class="container" data-dm="1">
+          <h3 class="link-name" data-dm="3">Cyber City</h3>
           <a class="link" href="/Cyber-City"><button class="play">Start Game</button></a>
         </div>
       </div>
-      <div class="card">
-        <img class="preview" src="../images/space-party.jpg" alt="Space Party">
-        <div class="container">
-          <h3 class="link-name">Space Party</h3>
+      <div class="card size">
+        <img class="preview size" src="../images/space-party.jpg" alt="Space Party">
+        <div class="container" data-dm="1">
+          <h3 class="link-name" data-dm="3">Space Party</h3>
           <a class="link" href="/Space-Party"><button class="play">Start Game</button></a>
         </div>
       </div>

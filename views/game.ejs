@@ -2,13 +2,13 @@
 <html>
   <head>
     <title><%= title %></title>
+    <i class="fa-solid fa-magnifying-glass"></i>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   </head>
-  <body class="lock-body">
-    <nav class="navbar" id="navbar">
-      <h1 class="game-title first"><a href="/">Photo<span class="second">Hunt</span></a></h1>
-      <div id="timer" class="timer">
+  <body class="lock-body" data-dm="2">
+    <nav class="navbar flex" id="navbar" data-dm="1">
+      <h1 class="game-title first" data-dm="4"><a href="/" data-dm="3">Photo<span class="second">Hunt</span></a></h1>
+      <div id="timer" class="timer" data-dm="3">
         <span class="digit" id="min"> 
             00</span> 
         <span class="txt">:</span> 
@@ -21,15 +21,15 @@
       <div id="object-list" class="list">
         <div class="object">
           <img class="object-img" src="../images/<%= data[0].object %>.png" alt="<%= data[0].object %>">
-          <p id="<%= data[0].object %>"><%= data[0].object %></p>
+          <p id="<%= data[0].object %>" data-dm="3"><%= data[0].object %></p>
         </div>
         <div class="object">
           <img class="object-img" src="../images/<%= data[1].object %>.png" alt="<%= data[1].object %>">
-          <p id="<%= data[1].object %>"><%= data[1].object %></p>
+          <p id="<%= data[1].object %>" data-dm="3"><%= data[1].object %></p>
         </div>
         <div class="object">
           <img class="object-img" src="../images/<%= data[2].object %>.png" alt="<%= data[2].object %>">
-          <p id="<%= data[2].object %>"><%= data[2].object %></p>
+          <p id="<%= data[2].object %>" data-dm="3"><%= data[2].object %></p>
         </div>
       </div>
       <button id="mode-switch" class="switch right"><box-icon name='tone' color="#6765cf"></box-icon></button>
@@ -37,34 +37,43 @@
     <div id="gameArea" class="lock-game">
       <img class="game-image" src="../images/<%= name %>.jpg" alt="Mario Castle">
     </div>
-    <dialog id="start-dialog" class="start-popup" open>
-      <div class="overview">
-        <img class="game-preview" src="../images/<%= name %>.jpg" alt="Mario Castle">
-        <div class="details">
-          <p><strong>Welcome to PhotoHunt!</strong></p>
-          <p><strong>Instructions</strong></p>
-          <p>See how fast you can find the characters.<br>
+    <dialog id="start-dialog" class="popup minsize" data-dm="1" open>
+      <div class="bx-overview flex">
+        <img class="flat size2" src="../images/<%= name %>.jpg" alt="Mario Castle">
+        <div class="flex details" data-dm="3">
+          <p style="font-size: 1.6rem;"><strong>Welcome to PhotoHunt!</strong></p>
+          <p style="font-size: 1.2rem;"><strong>Instructions</strong></p>
+          <p style="font-size: 1rem;">See how fast you can find the characters.<br>
           When you find one, right click the character and select them from the menu.<br>
           Press start when you are ready to begin!</p>
           <form method="dialog">
-            <button id="start-button">Start</button>
+            <div class="linklead"><button id="start-button" class="play">Start</button></div>
           </form>
         </div>
       </div>
     </dialog>
-    <dialog id="leaderboard-form" class="start-popup">
+    <dialog id="leaderboard-form" class="popup" data-dm="1">
       <form method="Post">
-        <p>You win! Post your time to the leaderboard.</p>
-        <label for="time">You finished in</label>
-        <input type="text" name="time" id="time" readonly>
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name" required>
-        <input type="text" name="game" id="game" hidden readonly>
-        <button id="leaderButton">OK</button>
+        <div class="finish flex" data-dm="3">
+          <p style="font-size: 1.2rem; margin: 0px;"> <span style="font-weight: bold;">You win!</span> <br> Post your time to the leaderboard.</p>
+          <div class="bx flex">
+            <label for="time">You finished in:</label>
+            <input type="text" name="time" id="time" readonly style="font-size: 1rem;">
+          </div>
+          <div class="bx flex">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required focus style="font-size: 1rem;">
+          </div>
+          <input type="text" name="game" id="game" hidden readonly>
+          <div class="bxe flex">
+            <button id="leaderButton" class="play">OK</button>
+          </div>
+        </div>
       </form>
     </dialog>
     <div id="popup" class="alert"></div>
-    <menu id="menu" class="absolute hidden"></menu>
+    <menu id="menu" class="menu absolute hidden" data-dm="1">
+    </menu>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="../javascripts/style.js"></script>
     <script src="../javascripts/game.js"></script>

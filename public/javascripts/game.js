@@ -71,16 +71,33 @@ function game(response){
     function createList(){
         for (let i = 0; i < gameData.length; i++) {
             if(gameData[i].found === false){
-                const object = document.createElement('button')
+                let container = document.createElement('div');
+                container.classList.add('bx-menu');
+                container.setAttribute('data-dm', '1');
+                let image = objImage(gameData[i].object);
+
+                let object = document.createElement('button');
+                object.classList.add('bt-menu');
                 object.innerHTML = gameData[i].object;
                 object.setAttribute('data', `${i}`)
+                object.setAttribute('data-dm', '3');
                 object.addEventListener('click',()=>{
                     checkCoordinates(menu.getAttribute('xcoord'), menu.getAttribute('ycoord'), object.getAttribute('data'));
                     menu.classList.add('hidden');
                 });
-                gameMenu.appendChild(object);
+
+                container.append(image, object);
+                gameMenu.appendChild(container);
             }
         }
+    };
+
+    function objImage(object){
+        let image = document.createElement('img');
+        image.setAttribute('src', `../images/${object}.png`);
+        image.setAttribute('alt', `${object}`);
+        image.classList.add('menu-image');
+        return image;
     };
 
     function clearList(){
@@ -209,6 +226,8 @@ function game(response){
             leaderBoardForm.show();
             timer = false;
             stopWatch();
+            body.classList.add('lock-body');
+            gameArea.classList.add('lock-game');
         }
     }
 

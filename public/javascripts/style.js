@@ -1,6 +1,5 @@
 let colorMode = document.getElementById('mode-switch');
-let header = document.getElementById('navbar');
-let body = document.querySelector('body');
+let page = document.querySelector('title').innerHTML;
 
 document.addEventListener('DOMContentLoaded', ()=>{
     //read cookie
@@ -35,10 +34,41 @@ function setCookie(state){
 
 function changeDisplay(state){
     if(state === 'state=dark'){
-        header.classList.add('darkmode');
-        body.classList.add('darkmode');
+        addDarkMode();
     }else{
-        header.classList.remove('darkmode');
-        body.classList.remove('darkmode');
+        removeDarkMode();
     }
 }
+
+//dmb1 dmb2 and dml
+//darkmode box and darkmode letter
+//query select all
+
+function addDarkMode(){
+    dmList = 4;
+
+    for (let i = 1; i <= dmList; i++) {
+        let dm = document.querySelectorAll(`[data-dm='${i}']`)
+        dm.forEach(element => {
+            element.classList.add(`darkmode${i}`)
+        });   
+    }
+    colorMode.classList.add('darkmode5')
+}
+
+function removeDarkMode(){
+    dmList = 4;
+
+    for (let i = 1; i <= dmList; i++) {
+        let dm = document.querySelectorAll(`[data-dm='${i}']`)
+        dm.forEach(element => {
+            element.classList.remove(`darkmode${i}`)
+        });   
+    }
+    colorMode.classList.remove('darkmode5')
+}
+
+//1 = dark 1 background
+//2 = dark 2 background
+//3 = letters
+//4 = hover
