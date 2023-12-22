@@ -125,8 +125,8 @@ a{
 }
 
 .size2{
-  width: clamp(307px, 20vw, 375px);
-  height: clamp(307px, 20vw, 375px); 
+  width: clamp(309px, 20vw, 375px);
+  height: clamp(309px, 20vw, 375px); 
 }
 
 .preview{
@@ -223,12 +223,18 @@ a{
   padding: 5px;
   border-radius: 8px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  color: black;
 }
 
 .bx-menu{
   display: flex;
   align-items: center;
   gap: 5px;
+  background-color: transparent;
+}
+
+.bt-menu{
+  background-color: transparent;
 }
 
 .menu-image{
@@ -242,7 +248,7 @@ a{
 
 /* alert message */
 .alert{
-  position: sticky;
+  position: fixed;
   bottom: 10vh;
   border-radius: 10px;
   padding: 5px;
@@ -516,9 +522,9 @@ a{
 .bt-menu {
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: button;
-  background-color: var(--light1);
+  background-color: transparent;
   background-image: none;
-  color: black;
+  color: inherit;
   border: none;
   cursor: pointer;
   font-size: 100%;
@@ -549,7 +555,7 @@ a{
   padding: 0.3rem;
 }
 .bt-menu:hover {
-  background-color: var(--hover-light);
+  background-color: inherit;
 }
 
 
@@ -578,5 +584,14 @@ a{
 }
 
 .darkmode5:hover{
+  background-color: var(--hover-dark);
+}
+
+.darkmode6{
+  background-color: var(--dark1);
+  color: var(--text);
+}
+
+.darkmode6 > button:hover{
   background-color: var(--hover-dark);
 }

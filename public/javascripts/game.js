@@ -5,7 +5,7 @@ window.onbeforeunload = function () {
     
 //---------Fetch Game Data-----------
 document.addEventListener('DOMContentLoaded', ()=>{
-    let gameName = document.querySelector('title').innerHTML;
+    let gameName = document.getElementById('title').innerHTML;
     fetch(`/${gameName}/data`, {mode: 'cors'})
     .then((response)=>{
         return(response.json());
@@ -73,14 +73,11 @@ function game(response){
             if(gameData[i].found === false){
                 let container = document.createElement('div');
                 container.classList.add('bx-menu');
-                container.setAttribute('data-dm', '1');
                 let image = objImage(gameData[i].object);
-
                 let object = document.createElement('button');
                 object.classList.add('bt-menu');
                 object.innerHTML = gameData[i].object;
                 object.setAttribute('data', `${i}`)
-                object.setAttribute('data-dm', '3');
                 object.addEventListener('click',()=>{
                     checkCoordinates(menu.getAttribute('xcoord'), menu.getAttribute('ycoord'), object.getAttribute('data'));
                     menu.classList.add('hidden');
@@ -155,7 +152,7 @@ function game(response){
             alert.innerHTML = "Try Again"
         }
         popup.appendChild(alert);
-        setTimeout(()=>{clearMessage()}, 3550)
+        setTimeout(()=>{clearMessage()}, 3505)
     }
 
     function clearMessage(){

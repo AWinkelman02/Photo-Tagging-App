@@ -1,5 +1,5 @@
 let colorMode = document.getElementById('mode-switch');
-let page = document.querySelector('title').innerHTML;
+let menu = document.getElementById('menu');
 
 document.addEventListener('DOMContentLoaded', ()=>{
     //read cookie
@@ -53,7 +53,8 @@ function addDarkMode(){
             element.classList.add(`darkmode${i}`)
         });   
     }
-    colorMode.classList.add('darkmode5')
+    colorMode.classList.add('darkmode5');
+    menu.classList.add('darkmode6');
 }
 
 function removeDarkMode(){
@@ -66,6 +67,7 @@ function removeDarkMode(){
         });   
     }
     colorMode.classList.remove('darkmode5')
+    menu.classList.remove('darkmode6');
 }
 
 //1 = dark 1 background
