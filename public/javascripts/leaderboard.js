@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     })
     .then((response)=>{
         leaderboard = response.leaderboard;
+        console.log(leaderboard)
         clearTable();
         showLeaderboard('Mario-Castle');
         setTitle('Mario-Castle');

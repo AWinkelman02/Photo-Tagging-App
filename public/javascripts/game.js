@@ -233,7 +233,7 @@ function game(response){
         let time = document.getElementById('time');
         let gameName = document.getElementById('game');
         time.value = getTime();
-        gameName.value = document.querySelector('title').innerHTML;
+        gameName.value = document.getElementById('title').innerHTML;
     }
        
     function getTime(){

@@ -20,7 +20,7 @@ exports.leaderboardData = asyncHandler(async (req, res, next) => {
     const leaderboard =  await Leaderboard.find({})
     .sort({ time: 1 })
     .exec();
-
+    console.log()
     res.send({leaderboard: leaderboard });
 });
 
