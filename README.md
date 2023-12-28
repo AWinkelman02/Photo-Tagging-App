@@ -1,7 +1,7 @@
 # PhotoHunt
 ![PhotoHunt](https://photohunt.s3.us-east-2.amazonaws.com/photohunt+4.png)
 
-# [Live Preview] (https://photohunt.adaptable.app/)
+# [Live Preview](https://photohunt.adaptable.app/)
 
 ## Overview
 
