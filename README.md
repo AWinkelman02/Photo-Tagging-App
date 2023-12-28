@@ -1,6 +1,8 @@
 # PhotoHunt
 
-# Overview
+# Live Preview(https://photohunt.adaptable.app/)
+
+## Overview
 
 PhotoHunt is a photo tagging game where the objective is to find all the hidden characters in a picture as fast as possible. Once all characters are found, the player can submit their score to the leaderboard where the submissions get sorted by fastest time. 
 
@@ -24,6 +26,7 @@ PhotoHunt is a photo tagging game where the objective is to find all the hidden 
 -Fetch leaderboard info to populate the leaderboard table
 
 ### More Images
-<details>
+<details open>
+<summary>More images</summary>
 
 </details>
