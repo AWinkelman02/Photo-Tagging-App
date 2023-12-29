@@ -32,4 +32,5 @@ PhotoHunt is a photo tagging game where the objective is to find all the hidden 
 <img src="https://photohunt.s3.us-east-2.amazonaws.com/photohunt+1.png" alt="home page">
 <img src="https://photohunt.s3.us-east-2.amazonaws.com/photohunt+2.png" alt="leaderboard page">
 <img src="https://photohunt.s3.us-east-2.amazonaws.com/photohunt+3.png" alt="game start">
+<img src="https://photohunt.s3.us-east-2.amazonaws.com/photohunt5.png" alt="error page">
 </details>

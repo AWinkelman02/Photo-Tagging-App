@@ -1,3 +1,34 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PhotoHunt</title>
+    <link rel="icon" type="image/mag-icon" href="../images/favicon.ico">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  </head>
+  <body data-dm="2">
+    <div class="page-container">
+      <div class="content">
+        <nav class="navbar flex" id="navbar" data-dm="1">
+          <h1 class="game-title first" data-dm="4"><a href="/" data-dm="3">Photo<span class="second">Hunt</span></a></h1>
+          <div class="list right">
+            <p class="leaderboard" data-dm="4"><a href="/leaderboard" data-dm="3">Leaderboard</a></p>
+            <button id="mode-switch" class="switch"><box-icon name='tone' color="#6765cf"></box-icon></button>
+          </div>
+        </nav>
+        <div class="error">
+          <h1 data-dm="3">4🔍4</h1>
+          <h3 data-dm="3">Page Not Found</h3>
+          <p data-dm="3">The link you visited doesn't exist. <a data-dm="3" href="/" style="font-weight: bold;">Back to home.</a></p>
+        </div>
+      <footer data-dm="1">
+        <a class="foot" href="https://github.com/AWinkelman02/Photo-Tagging-App">
+          <h3>AWinkelman02</h3>
+          <box-icon type="logo" name='github' color="#6765cf"></box-icon>
+        </a>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="../javascripts/style.js"></script>
+  </body>
+</html>
