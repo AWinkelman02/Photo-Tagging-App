@@ -225,8 +225,8 @@ a{
 }
 
 .object-img{
-  width: 2.4vw;
-  height: auto;
+  width: clamp(45px, 2.4vh, 73px);
+  height: auto; 
 }
 
 .object > p{
