@@ -32,5 +32,5 @@ PhotoHunt is a photo tagging game where the objective is to find all the hidden 
 <img src="https://lh3.googleusercontent.com/pw/AP1GczMYtIPAOgc_hwfybF6ENSOWYUj74FixT99BvjixWka03xeeY4_aCt9um42CbqAiT1pkMULgK-D7EoPH6YisYBHhEAg4RMPPteIII5iMTSacZUr_K8NhMoIE5NTrP-8gNuX42G_RCYc6VwSEktWh85A=w1864-h1169-s-no-gm?authuser=1" alt="home page">
 <img src="https://lh3.googleusercontent.com/pw/AP1GczPuPGiFwBq2_5-YO1hmrnwyxwtRA82DotALpU71ar7ot_JHUomyX_Txcx-vCTCsjFVcpZBqJw7VdIkqGODK3aBitLpHTpK6aGqz6RRbO09fnAdfDJgPpiZsXSTrJYybg-ITh7NUIokjly9j0khgdqs=w1858-h1168-s-no-gm?authuser=1" alt="leaderboard page">
 <img src="https://lh3.googleusercontent.com/pw/AP1GczPBsCUA0Ps9l803kuNCbKLhYcxLJEOOIdTkbRUx9qSlQrKsa72rVOEi_hFbgI2zws3kJeM9uZK8HbJjks3b-qBY9eGVpcUCAEVzrD7OcPdTui8WYaU_Q1oiv0JI-k7tkJKANDpIU8vHyCxNQabdV4A=w1864-h1174-s-no-gm?authuser=1" alt="game start">
-<img src="https://photos.google.com/u/1/share/AF1QipMJ-g3kFQ8_7XBwB0iaETh__fx9CkW0sSEzWUaGEkhc1MJSjhJAMezDs3818aDQLA/photo/AF1QipNm6Djsjo8YnMU5dLgO0NKqSLW0AQ7agLnda_3x?key=SjNUV1UtU1U1WWdPWThDSUdieGVvR2hkaWpybmpn" alt="error page">
+<img src="https://lh3.googleusercontent.com/pw/AP1GczOeR9E4w8qqKsrFPo6PdOfAO4iFXFdDPXJUFY5LpkFzRmSudV9mcy97ZCSDE3uYNu5Gwy1XWzmQgb8zajtEMDeGzoTigAII4MSnAklLodAY1gwZNNgEv8k17dmo7fSRSKrQsoroouVY-kBwyCtnT38=w1598-h1020-s-no-gm?authuser=1" alt="error page">
 </details>
