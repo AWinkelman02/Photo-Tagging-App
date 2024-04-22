@@ -1,5 +1,5 @@
 # PhotoHunt
-![PhotoHunt](https://photohunt.s3.us-east-2.amazonaws.com/photohunt+4.png)
+![PhotoHunt](https://lh3.googleusercontent.com/pw/AP1GczNIs8_MUvy_VXsPNBrS6L9fhBEoCKrz-vof7Xr_FctTFKxpt_vE-5SqYPWTzliJbo2KvaIxDe5CN5fYCEjxpJZdAZe7aZ2pylaT_B1dqiKP7JBNJI-ScFbSLxt0F4er4yhc7Rfa1qXXqr8xa3bP9qo=w1847-h1169-s-no-gm?authuser=1)
 
 # [Live Preview](https://photohunt.adaptable.app/)
 
@@ -29,7 +29,7 @@ PhotoHunt is a photo tagging game where the objective is to find all the hidden 
 ### More Images
 <details open>
 <summary>More images</summary>
-<img src="https://photohunt.s3.us-east-2.amazonaws.com/photohunt+1.png" alt="home page">
+<img src="https://lh3.googleusercontent.com/pw/AP1GczMYtIPAOgc_hwfybF6ENSOWYUj74FixT99BvjixWka03xeeY4_aCt9um42CbqAiT1pkMULgK-D7EoPH6YisYBHhEAg4RMPPteIII5iMTSacZUr_K8NhMoIE5NTrP-8gNuX42G_RCYc6VwSEktWh85A=w1864-h1169-s-no-gm?authuser=1" alt="home page">
 <img src="https://photohunt.s3.us-east-2.amazonaws.com/photohunt+2.png" alt="leaderboard page">
 <img src="https://photohunt.s3.us-east-2.amazonaws.com/photohunt+3.png" alt="game start">
 <img src="https://photohunt.s3.us-east-2.amazonaws.com/photohunt5.png" alt="error page">
