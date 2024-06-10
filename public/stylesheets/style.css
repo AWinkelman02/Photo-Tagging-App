@@ -286,6 +286,7 @@ a{
 .alert{
   position: fixed;
   bottom: 10vh;
+  left: 50%;
   border-radius: 10px;
   padding: 5px;
   width: fit-content;
